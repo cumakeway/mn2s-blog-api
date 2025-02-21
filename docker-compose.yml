@@ -1,0 +1,18 @@
+version: "3"
+networks:
+    mn2sblog:
+services:
+    web:
+        container_name: mn2s_blog_api
+        networks:
+              - mn2sblog
+        build: .
+        tty: true
+        stdin_open: true
+        volumes:
+            - ./src:/var/www/html
+            - ./config/000-default.conf:/etc/apache2/sites-available/000-default.conf
+
+        ports:
+          - 8180:80
+          - 3356:3306
