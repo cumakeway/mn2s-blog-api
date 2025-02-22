@@ -25,4 +25,8 @@ So you can use the following db creds in your laravel api .env file
 * open the `hosts` file on your machine and add `mn2s-blogapi.test` which is the servername set in the vhost in the `config/000-default.conf`
 * add the root url of the wordpress blog and assign it to `.env` value `WORDPRESS_ROOT_URL`
 
- 
+ **How to Run Application**
+ * Setup your Wordpress blog and add some blog posts
+ * If you are using a local Wordpress instance, you may need to create vhost for your wordpress setup in
+   MAMP or WAMP `httpd-vhosts.conf` as you may run into errors using Guzzle client to get blog posts from the wordpress site when running the command to get posts
+ * run `php artisan app:get-blog-posts-from-wordpress` to get blog posts from the wordpress site and save to Laravel API db.
