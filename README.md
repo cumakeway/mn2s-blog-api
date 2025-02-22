@@ -22,7 +22,7 @@ So you can use the following db creds in your laravel api .env file
 * Open Laravel API docker container terminal, type `bash`.
 * From the terminal of the docker container run `composer install` to install composer dependencies.
 * Also from the docker container terminal run `service apache2 start` to start apache webserver in the docker container.
-* open the `hosts` file on your machine and add `mn2s-blogapi.test` which is the servername set in the vhosts in the `config/000-default.conf`
+* open the `hosts` file on your machine and add `mn2s-blogapi.test` which is the servername set in the vhost in the `config/000-default.conf`
 * add the root url of the wordpress blog and assign it to `.env` value `WORDPRESS_ROOT_URL`
 
  
