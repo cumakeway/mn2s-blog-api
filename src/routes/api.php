@@ -17,5 +17,7 @@ use App\Http\Controllers\PostController;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-
-Route::resource('posts', PostController::class);
+Route::group(['middleware' => 'cors'], function () {
+    Route::get('/posts', [PostController::class, 'index']);
+    Route::get('/posts/{id}', [PostController::class, 'show']);
+});
